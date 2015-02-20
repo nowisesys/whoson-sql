@@ -4,29 +4,33 @@
 
 ** GENERAL:
 
-   This directory contains the script for creating the MySQL database.
+   This directory contains the script for creating the MySQL     
+   database.
 
 ** CREATE DATABASE:
 
-   Heres the instructions for creating the database for localhost (loopback)
-   access only:
+   Heres the instructions for creating the database for    
+   localhost (loopback) access only:
    
      user@host ~ $ mysql -u root -p 
        ...
      mysql> create database whoson;
      mysql> use whoson
      mysql> source whoson.sql
-     mysql> grant select,insert,update,delete on whoson.* to whoson@localhost identified by '<secret>';
+     mysql> grant select,insert,update,delete on whoson.* \
+		 	to whoson@localhost identified by '<secret>';
      mysql> flush privileges;
    
-   If the database is going to be accessed from other hosts (running the web 
-   service), then grant access to these hosts also:
+   If the database is going to be accessed from other hosts 
+   (running the web service), then grant access to these hosts 
+   also:
 
-     mysql> grant select,insert,update,delete on whoson.* to whoson@hostname identified by '<secret>';
+     mysql> grant select,insert,update,delete on whoson.* \
+			to whoson@hostname identified by '<secret>';
      mysql> flush privileges;
 
-   Use a wildcard ('%') instead of hostname to grant access from any remote 
-   host (not recommended).
+   Use a wildcard ('%') instead of hostname to grant access 
+   from any remote host (not recommended).
 
 
 // Anders Lövgren, 2012-02-27

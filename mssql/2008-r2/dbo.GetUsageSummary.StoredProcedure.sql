@@ -25,7 +25,7 @@ CREATE PROCEDURE [dbo].[GetUsageSummary]
 	@stime	DATETIME = NULL,		/* Start time */
 	@etime	DATETIME = NULL,		/* End time */
 	@user	NCHAR(20) = NULL,		/* Filter on user */
-	@domain	NCHAR(10) = NULL,		/* Filter on domain */
+	@domain	NCHAR(16) = NULL,		/* Filter on domain */
 	@host	NVARCHAR(50) = NULL		/* Filter on hostname */
 AS
 BEGIN
@@ -41,7 +41,7 @@ BEGIN
 		@stime	DATETIME,
 		@etime	DATETIME,
 		@user	NCHAR(20),
-		@domain	NCHAR(10),
+		@domain	NCHAR(16),
 		@host	NVARCHAR(50)'
 	
 	SELECT @sqlquery = '

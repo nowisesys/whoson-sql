@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `logons`;
 CREATE TABLE `logons` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(20) NOT NULL,
-  `domain` varchar(10) NOT NULL,
+  `domain` varchar(16) NOT NULL,
   `hwaddress` char(17) DEFAULT NULL,
   `ipaddress` varchar(46) NOT NULL,
   `hostname` varchar(50) DEFAULT NULL,
