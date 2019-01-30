@@ -11,4 +11,4 @@
 
    For use with release serie 1.3.x of whoson-asp or whoson-php (server side).
 
-// Anders Lövgren, 2011-11-23
+// Anders LÃ¶vgren, 2011-11-23
